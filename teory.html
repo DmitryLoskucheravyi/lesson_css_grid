@@ -16,7 +16,42 @@
         box.addEventListener("dblclick", function() {
         this.classList.toggle("active"); 
         });
-    </script>
+
+        let startX = 0; // координата початку свайпу
+
+    // Коли палець торкається
+    box.addEventListener("touchstart", (e) => {
+        startX = e.touches[0].clientX;
+    });
+
+    // Коли палець відпускають
+    box.addEventListener("touchend", (e) => {
+        let endX = e.changedTouches[0].clientX;
+        let diffX = endX - startX;
+
+        if (Math.abs(diffX) > 50) { // поріг у 50px
+            if (diffX < 0) {
+                // свайп вліво → додаємо active
+                box.classList.add("active");
+            } else {
+                // свайп вправо → забираємо active
+                box.classList.remove("active");
+            }
+        }
+    });
+
+    window.addEventListener("deviceorientation", (e) => {
+    let tilt = e.gamma; // нахил вліво/вправо
+
+    if (tilt > 30) {
+        // нахил вправо → прибираємо active
+        box.classList.remove("active");
+    } else if (tilt < -30) {
+        // нахил вліво → додаємо active
+        box.classList.add("active");
+    }
+});
+</script>
 
     <div class="divposer"></div>
     <div class="divposer"></div>

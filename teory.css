@@ -22,14 +22,14 @@ body {
     box-shadow: 1px 1px 20px rgb(153, 153, 153);
     border-radius: 5px;
     color: rgb(187, 189, 189);
-    transition: all .5s ease-in-out;
+    transition: all .33s ease-in-out;
     cursor: pointer;
     user-select: none;
 
 }
 
 .active {
-    translate: -90% 0 0;
+    translate: -80% 0 0;
     color: rgb(255, 255, 255);
 }
 
