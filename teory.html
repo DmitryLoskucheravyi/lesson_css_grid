@@ -40,17 +40,7 @@
         }
     });
 
-    window.addEventListener("deviceorientation", (e) => {
-    let tilt = e.gamma; // нахил вліво/вправо
-
-    if (tilt > 30) {
-        // нахил вправо → прибираємо active
-        box.classList.remove("active");
-    } else if (tilt < -30) {
-        // нахил вліво → додаємо active
-        box.classList.add("active");
-    }
-});
+   
 </script>
 
     <div class="divposer"></div>
