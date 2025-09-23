@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> CSS GRID </title>
+    <style>
+
+        *{
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+
+        }
+
+        header {
+            width: 100%;
+            height: 10vh;
+            margin: 0 auto;
+            text-align: center;
+            margin: 0 0 20px 0 ;
+        }
+
+        .h1__main{
+            font-size: 60px;
+            letter-spacing: 3px;
+        }
+
+        .H1 {
+            display: inline-block;
+            transition: all .1s ease-in-out;
+        }
+
+        .H1:hover {
+            translate: 0px -10px 0;
+            color: rgb(52, 203, 214);
+        }
+
+        .main__container {
+            width: 100%;
+            height: 80vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 30px;
+        }
+        
+        .main__container .btn {
+            width: 340px;
+            height: 80px;
+            border: none;
+            outline: 1px solid rgb(226, 226, 226);
+            border-radius: 10px;
+            background-color: #fff;
+            box-shadow: 1px 3px 5px rgb(212, 212, 212);
+            transition: all 0.23s ease-in-out;
+            text-align: center;
+
+
+        }
+
+        .btn:hover {
+            outline: 3px solid rgb(226, 226, 226);
+            opacity: 0.6;
+        }
+
+        .btn .link {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 100%;
+            text-transform: uppercase;
+            text-decoration: none;
+            color: black;
+            font-weight: bold;
+            font-size: 14px;
+            letter-spacing: 1px;
+        }
+        footer {
+            width: 100%;
+            padding: 20px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: center;
+        }
+        footer p {
+            max-width: 350px;
+            border-radius: 10px;
+            padding: 10px;
+            background-color: #dfe7e7;
+            font-size: 16px;
+            transition: all 0.8s ease-in-out;
+        }
+
+        footer:hover > p {
+            translate: 0 -320px 0;
+            scale: 3;
+        }
+
+
+            @media(max-width: 685px) {
+                body {
+                gap: 10px;
+            }
+                .h1__main{
+                font-size: 30px;
+                letter-spacing: 2px;
+            } 
+
+            .main__container .btn {
+                width: 260px;
+                height: 60px;
+                padding: 20px;
+                border: 1px solid rgb(206, 206, 206);
+                border-radius: 10px;
+                background-color: #fff;
+                box-shadow: 1px 3px 5px rgb(212, 212, 212);
+            }
+            }
+
+
+    </style>
+    
+</head>
+<body>
+    <header>
+        <h1 class="h1__main">
+            <span class="H1">C</span><span class="H1">S</span><span class="H1">S</span><span class="H1"> </span>
+            <span class="H1">D</span><span class="H1">I</span><span class="H1">S</span><span class="H1">P</span><span class="H1">L</span><span class="H1">A</span><span class="H1">Y</span><span class="H1">:</span><span class="H1"> </span>
+            <span class="H1">G</span><span class="H1">R</span><span class="H1">I</span><span class="H1">D</span>
+        </h1>
+
+    </header>
+    <main>
+        <div class="main__container">
+            <button class="btn">
+                <a href="teory.html" class="link" target="_blank">теоритична частина</a>
+            </button>
+            <button class="btn">
+                <a href="practick.html" class="link" target="_blank">практична частина</a>
+            </button>
+        </div>
+    </main>
+
+    <footer>
+        <p><code>Created by Dmitry Loskucheravyi</code></p>
+    </footer>
+</body>
+</html>

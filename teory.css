@@ -1,0 +1,102 @@
+* {
+    box-sizing: border-box;
+}
+
+
+body {
+    position: relative;
+    margin: 0;
+}
+
+.teory{
+    outline: 1px solid rgb(190, 190, 190);
+    border: none;
+    margin: 5px 0 0 5px;
+    padding: 10px;
+    position: sticky;
+    top: 1vh;
+    left: 1vh;
+    width: 250px;
+    height: 100px;
+    overflow: hidden;
+    box-shadow: 1px 1px 20px rgb(153, 153, 153);
+    border-radius: 5px;
+    color: rgb(187, 189, 189);
+    transition: all .5s ease-in-out;
+    cursor: pointer;
+    user-select: none;
+
+}
+
+.active {
+    translate: -90% 0 0;
+    color: rgb(255, 255, 255);
+}
+
+.teory:not(.active):hover{
+    translate: 5px 5px 0;
+    height: 290px;
+    color: rgb(0, 0, 0);
+}
+
+
+
+p {
+    font-size: 22px;
+    text-align: justify;
+} 
+code {
+    padding:  5px 10px;
+    background-color: #ebebeb;
+    border-radius: 5px;
+}
+
+
+.divposer {
+    height: 1000px;
+}
+
+
+@media (max-width:768px) {
+    .teory{
+        width: 250px;
+        height: 100px;
+
+    }
+
+    .teory:not(.active):hover{
+        height: 200px;
+
+    }
+
+    p {
+        font-size: 18px;
+    } 
+
+    code {
+        padding:  3px 7px;
+        background-color: #ebebeb;
+        border-radius: 5px;
+    }
+}
+
+@media (max-width:468px) {
+    .teory{
+        width: 160px;
+        height: 50px;
+    }
+
+    .teory:not(.active):hover{
+        height: 160px;
+    }
+
+    p {
+        font-size: 12px;
+    } 
+
+    code {
+        padding:  2px 5px;
+        background-color: #ebebeb;
+        border-radius: 5px;
+    }
+}
