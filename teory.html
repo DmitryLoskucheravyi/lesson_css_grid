@@ -7,11 +7,76 @@
     <title>teory</title>
 </head>
 <body>
-    <div class="teory">
-        <p> <code>CSS GRID</code> -  це система двовимірної сітки для веб-розмітки. Вона дозволяє легко розташовувати елементи в рядки та колонки, контролювати відступи, вирівнювання і пропорції. </p>
-    </div>
+        <div class="teory active">
+            <p> <code>CSS GRID</code> -  це система двовимірної сітки для веб-розмітки. Вона дозволяє легко розташовувати елементи в рядки та колонки, контролювати відступи, вирівнювання і пропорції. </p>
+        </div>
+    <main>
+
+        <div class="container">
+            <div class="info__container">
+                <p>
+                    Основні моменти про <code>Grid</code>:  
+                    <br><b>Двовимірність</b> — на відміну від <code>Flexbox</code> (який добре працює в одному напрямку), 
+                    <code>Grid</code> дозволяє одночасно керувати і рядками, і стовпцями.
+                    <br>
+                    <br><b>Контейнер і елементи</b> — є <code>grid-container</code> (батьківський елемент з 
+                    <code>display: grid</code>) і <code>grid-items</code> (дочірні елементи).
+                    <br>
+                    <br><b>Оголошення сітки</b>:  
+                    <code>grid-template-columns</code> і <code>grid-template-rows</code> — задають кількість і розміри стовпців/рядків.  
+                    <code>gap</code> (або <code>row-gap</code> / <code>column-gap</code>) — відстань між елементами.
+                    <br><b>Розміри</b> можна задавати у фіксованих (<code>px</code>, <code>em</code>), відсоткових або динамічних (<code>fr</code>) одиницях.  
+                    <code>fr</code> означає "частина доступного простору".
+                    <br>
+
+                    <br><b>Вирівнювання</b>:  
+                    <code>justify-items</code>, <code>align-items</code> — вирівнювання елементів всередині комірок.  
+                    <code>justify-content</code>, <code>align-content</code> — вирівнювання всієї сітки всередині контейнера.
+                </p>
+
+            </div>
+        </div>
+
+    </main>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     <script>
         const box = document.querySelector(".teory");
+        const infoContainer = document.querySelector(".info__container");
 
         box.addEventListener("dblclick", function() {
         this.classList.toggle("active"); 
@@ -40,12 +105,11 @@
         }
     });
 
-   
+    infoContainer.addEventListener("click", function() {
+        this.classList.toggle("info__container-active")
+    });
 </script>
 
-    <div class="divposer"></div>
-    <div class="divposer"></div>
-    <div class="divposer"></div>
 
 </body>
 </html>
