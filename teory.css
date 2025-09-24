@@ -92,7 +92,8 @@ main {
     box-shadow: 1px 1px 20px rgb(126, 126, 126);
     height: 200px;
     overflow: hidden;
-    transition: all .33s ease-in-out;
+    transition: height 0.33s ease-in-out;
+
 }
 
 
@@ -195,7 +196,7 @@ main {
 
 @media (max-width:400px) {
     .info__container p {
-        font-size: 12px;
+        font-size: 10px;
         line-height: 160%;
     }
 
